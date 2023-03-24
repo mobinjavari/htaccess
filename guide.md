@@ -1,6 +1,6 @@
 <div align="center">
   <h1>How to use htaccess</h1>
-  <p>Hello, here we are going to teach you how to use htaccess / <a href="./">A ready personalized file</a></p><br><br>
+  <p>Hello, here we are going to teach you how to use htaccess</p><br><br>
   <div align="left">
     <ul>
       <li>Preventing the theft of files and folders on the host :</li><br>
