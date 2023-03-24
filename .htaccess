@@ -1,0 +1,42 @@
+# Directory Index
+DirectoryIndex index.php index.html
+
+# Disable Directory Browsing
+Options –Indexes
+Options All -Indexes
+
+# Remove slash in end directory
+DirectorySlash Off
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# Redirect Browser to https
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Change the Charset and Language headers
+AddDefaultCharset UTF-8
+DefaultLanguage fa-IR
+
+# Block Access to a Comprehensive Range of Files
+<Files ".(htaccess | htpasswd | ini | phps | fla | psd | log | sh)$">
+ Order Allow,Deny
+ Deny from all
+</Files>
+
+# Run Php without filename extension
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Return 404 if original request is .php
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “alt-php80” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-alt-php80 .php .php8 .phtml
+</IfModule>
