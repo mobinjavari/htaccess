@@ -8,9 +8,11 @@
       <li><strong>Rewriting Urls</strong> : Servers often use htaccess to rewrite "ugly" URLs to shorter and prettier ones.</li><br>
       <li><strong>Cache Control</strong> : htaccess files allow a server to control User agent caching used by web browsers to reduce bandwidth usage, server load, and perceived lag.</li>
     </ol><br><br>
-    <p>When a .htaccess file is placed in a directory which is in turn 'loaded via the Apache Web Server', then the .htaccess file is detected and executed by the Apache Web Server software.</p>
-    <p>These .htaccess files can be used to alter the configuration of the Apache Web Server software to enable/disable additional functionality and features that the Apache Web Server software has to offer.</p>
-    <p>These facilities include basic redirect functionality, for instance if a 404 file not found error occurs, or for more advanced functions such as content password protection or image hot link prevention.</p>
-    <p>Whenever any request is sent to the server it always passes through .htaccess file. There are some rules are defined to instruct the working.</p><br>
+    <ul>
+      <li>When a .htaccess file is placed in a directory which is in turn 'loaded via the Apache Web Server', then the .htaccess file is detected and executed by the Apache Web Server software.</li>
+      <li>These .htaccess files can be used to alter the configuration of the Apache Web Server software to enable/disable additional functionality and features that the Apache Web Server software has to offer.</li>
+      <li>These facilities include basic redirect functionality, for instance if a 404 file not found error occurs, or for more advanced functions such as content password protection or image hot link prevention.</li>
+      <li>Whenever any request is sent to the server it always passes through .htaccess file. There are some rules are defined to instruct the working.</li>
+    </ul><br>
   </div>
 </div>
